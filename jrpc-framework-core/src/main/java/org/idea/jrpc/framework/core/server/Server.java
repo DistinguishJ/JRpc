@@ -50,6 +50,7 @@ public class Server {
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
                 System.out.println("初始化服务器过程！");
+                System.out.println("ok");
                 //ch.pipeline()返回的是和这条连接相关的逻辑处理链，采用链责任链模式
                 ch.pipeline().addLast(new RpcEncoder());
                 ch.pipeline().addLast(new RpcDecoder());
